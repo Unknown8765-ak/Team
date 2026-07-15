@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import useWebsiteContent from "../../services/websiteContent/useWebsiteContent";
+
 
 const Hero = () => {
+      const { content, loading } = useWebsiteContent("home");
+
   return (
     <section className="bg-linear-to-br from-indigo-50 via-white to-purple-100 py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
@@ -88,15 +92,25 @@ const Hero = () => {
 
             <div className="h-130 rounded-3xl bg-gray-300 flex items-center justify-center shadow-xl">
 
-              <span className="text-2xl font-semibold text-gray-500">
-                Dummy Agency Image
-              </span>
+              {loading ? (
+                    <p>Loading...</p>
+                  ) : content?.sections?.hero?.image ? (
+                    <img
+                      src={content.sections.hero.image}
+                      alt="Hero"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <p className="text-gray-600 font-semibold">
+                      Hero Image
+                    </p>
+                  )}
 
             </div>
 
             {/* Floating Card */}
 
-            <div className="absolute -bottom-8 -left-6 bg-white shadow-2xl rounded-2xl p-6 w-64">
+            {/* <div className="absolute -bottom-8 -left-6 bg-white shadow-2xl rounded-2xl p-6 w-64">
 
               <h3 className="text-3xl font-bold text-indigo-600">
                 150+
@@ -106,7 +120,7 @@ const Hero = () => {
                 Successful Digital Projects
               </p>
 
-            </div>
+            </div> */}
 
             {/* Floating Badge */}
 

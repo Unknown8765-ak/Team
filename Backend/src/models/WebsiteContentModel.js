@@ -17,9 +17,64 @@ const websiteContentSchema = new mongoose.Schema(
     },
 
     sections: {
-      type: Object,
-      required: true,
-      default: {},
+      hero: {
+        image: {
+          type: String,
+          default: "",
+        },
+        public_id: {
+          type: String,
+          default: "",
+        },
+      },
+
+      about: {
+        image: {
+          type: String,
+          default: "",
+        },
+        public_id: {
+          type: String,
+          default: "",
+        },
+      },
+
+      gallery: [
+        {
+          image: {
+            type: String,
+            default: "",
+          },
+          public_id: {
+            type: String,
+            default: "",
+          },
+        },
+      ],
+
+      projects: [
+        {
+          title: {
+            type: String,
+            default: "",
+          },
+
+          description: {
+            type: String,
+            default: "",
+          },
+
+          image: {
+            type: String,
+            default: "",
+          },
+
+          public_id: {
+            type: String,
+            default: "",
+          },
+        },
+      ],
     },
   },
   {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { sendContactMessage } from "../../services/contactService/contactService";
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -19,28 +20,21 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (data) => {
-    try {
-      setLoading(true);
+ const onSubmit = async (data) => {
+  try {
+    setLoading(true);
 
-      console.log(data);
+    const response = await sendContactMessage(data);
 
-      // ==========================
-      // Future Backend Integration
-      // await createLead(data);
-      // toast.success("Message Sent Successfully");
-      // ==========================
+    alert(response.message);
 
-      reset();
-    } catch (error) {
-      console.error(error);
-
-      // toast.error("Something went wrong");
-    } finally {
-      setLoading(false);
-    }
-  };
-
+    reset();
+  } catch (error) {
+    alert(error.message);
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-4xl mx-auto px-6">

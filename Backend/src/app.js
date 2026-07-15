@@ -24,6 +24,8 @@ import testimonialRoute from "./routes/testimonial.routes.js";
 import profileRoute from "./routes/profile.routes.js"
 import settingsRoute from "./routes/setting.routes.js"
 import dashboardRoutes from "./routes/dashboard.route.js";
+import websiteContentRoute from "./routes/websiteContent.route.js"
+import contactRoutes from "./routes/contact.route.js";
 
 
 
@@ -34,7 +36,8 @@ app.use("/api/v1/testimonials", testimonialRoute);
 app.use("/api/v1/profile", profileRoute);
 app.use("/api/v1/settings", profileRoute);
 app.use("/api/v1/dashboard", dashboardRoutes);
-
+app.use("/api/v1/website-content",websiteContentRoute );
+app.use("/api/v1/contact", contactRoutes);
 
 
 app.use(errorHandler)

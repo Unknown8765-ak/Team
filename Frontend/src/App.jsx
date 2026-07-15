@@ -25,6 +25,7 @@ import Gallery from "./pages/admin/Gallery";
 import Testimonials from "./pages/admin/Testimonials";
 import Settings from "./pages/admin/Settings";
 import Profile from "./pages/admin/Profile";
+import WebsiteContent from "./pages/admin/WebsiteContent";
 
 function App() {
   return (
@@ -58,6 +59,10 @@ function App() {
               <Route
                 path="/admin/dashboard"
                 element= {<Dashboard />}
+              />
+              <Route
+                path="/admin/website-content"
+                element= {<WebsiteContent />}
               />
 
               <Route

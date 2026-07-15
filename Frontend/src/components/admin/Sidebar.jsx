@@ -85,7 +85,6 @@ const handleLogout = async () => {
   return (
     <aside className="w-72 bg-slate-900 text-white flex flex-col">
 
-      {/* Logo */}
 
       <div className="p-6 border-b border-slate-700">
         <h2 className="text-2xl font-bold">
@@ -97,7 +96,6 @@ const handleLogout = async () => {
         </p>
       </div>
 
-      {/* Navigation */}
 
       <nav className="flex-1 py-6">
 
@@ -123,7 +121,6 @@ const handleLogout = async () => {
 
       </nav>
 
-      {/* Logout */}
 
       <div className="border-t border-slate-700 p-5">
 

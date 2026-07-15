@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <button
+        {/* <button
           className="
             hidden
             lg:block
@@ -31,7 +31,7 @@ const Navbar = () => {
           "
         >
           Consult an Expert
-        </button>
+        </button> */}
 
         {/* Mobile Menu */}
         <div className="lg:hidden">

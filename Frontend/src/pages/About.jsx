@@ -12,7 +12,7 @@ const About = () => {
       <CompanyStory />
       <MissionVision />
       <CoreValues />
-      <Team />
+      {/* <Team /> */}
       <CTA />
     </>
   );

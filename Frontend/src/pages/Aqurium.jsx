@@ -11,7 +11,7 @@ const Aquarium = () => {
       <Services />
       <Gallery />
       <Process />
-      <CTA />
+      {/* <CTA /> */}
     </>
   );
 };

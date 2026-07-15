@@ -50,11 +50,6 @@ export const whySolar = [
     value: "100% Clean Energy",
   },
   {
-    id: 3,
-    title: "Long Life",
-    value: "25+ Years",
-  },
-  {
     id: 4,
     title: "Government Support",
     value: "Available Subsidies",

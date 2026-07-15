@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
+import useWebsiteContent from "../../services/websiteContent/useWebsiteContent";
+
+
 
 const Hero = () => {
+
+    const { content, loading } = useWebsiteContent("home");
+
+
   return (
     <section className="bg-slate-100">
       <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
@@ -58,12 +65,22 @@ const Hero = () => {
 
           <div className="flex justify-center">
 
-            <div className="w-full max-w-md h-112.5 rounded-3xl bg-gray-300 flex items-center justify-center">
-
-              <p className="text-gray-600 font-semibold">
-                Hero Image
-              </p>
-
+            <div className="w-full max-w-md h-112.5 rounded-3xl overflow-hidden">
+              <div className="w-full max-w-md h-112.5 rounded-3xl overflow-hidden bg-gray-300 flex items-center justify-center">
+                  {loading ? (
+                    <p>Loading...</p>
+                  ) : content?.sections?.hero?.image ? (
+                    <img
+                      src={content.sections.hero.image}
+                      alt="Hero"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <p className="text-gray-600 font-semibold">
+                      Hero Image
+                    </p>
+                  )}
+              </div>
             </div>
 
           </div>
