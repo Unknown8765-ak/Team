@@ -34,7 +34,7 @@ app.use("/api/v1/gallery", galleryRoute);
 app.use("/api/v1/leads", leadRoute);
 app.use("/api/v1/testimonials", testimonialRoute);
 app.use("/api/v1/profile", profileRoute);
-app.use("/api/v1/settings", profileRoute);
+app.use("/api/v1/settings", settingsRoute);
 app.use("/api/v1/dashboard", dashboardRoutes);
 app.use("/api/v1/website-content",websiteContentRoute );
 app.use("/api/v1/contact", contactRoutes);
