@@ -1,10 +1,13 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { login, logout, stopLoading } from "../../auth/authSlice"
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 
 const AuthLoader = ({ children }) => {
+
   const dispatch = useDispatch()
-  const API_URL = "http://localhost:8000"
 
   useEffect(() => {
     const loadUser = async () => {
@@ -12,7 +15,7 @@ const AuthLoader = ({ children }) => {
 
       try {
         const res = await fetch(
-          `${API_URL}/api/v1/auth/me`,
+          `${API_URL}/auth/me`,
           
           { credentials: "include" }
         )
