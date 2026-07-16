@@ -1,5 +1,5 @@
 import { Setting } from "../models/SettingModel.js";
-import { asyncHandler } from "../utils/asyncHandler.js";
+import { asyncHandler } from "../utils/asynchandler.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiReponse.js";
 import { uploadoncloudinary } from "../utils/cloudinary.js";
