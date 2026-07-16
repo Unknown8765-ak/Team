@@ -1,4 +1,4 @@
-import HeroImageCard from "../../components/admin/websiteContent/HeroImageCard";
+import HeroImageCard from "../../components/admin/WebsiteContent/HeroImageCard"
 import GalleryManager from "../../components/admin/WebsiteContent/GalleryManager";
 import ProjectManager from "../../components/admin/WebsiteContent/ProjectManager";
 
