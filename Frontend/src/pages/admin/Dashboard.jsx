@@ -1,8 +1,8 @@
 import AdminLayout from "../../layouts/AdminLayout";
 
-import StatsCard from "../../components/admin/dashboard/StatsCard";
-import RecentLeads from "../../components/admin/dashboard/RecentLeads";
-import QuickActions from "../../components/admin/dashboard/QuickActions";
+import StatsCard from "../../components/admin/DashBoard/StatsCard";
+import RecentLeads from "../../components/admin/DashBoard/QuickActions";
+import QuickActions from "../../components/admin/DashBoard/RecentLeads";
 
 const Dashboard = () => {
   return (
